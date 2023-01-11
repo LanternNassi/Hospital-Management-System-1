@@ -1,0 +1,203 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F0FF66BB-FFFE-4198-A48F-E79A513B7F3F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Hospital_Management_System</RootNamespace>
+    <AssemblyName>Hospital Management System</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DAL\Categories_DAL.cs" />
+    <Compile Include="DAL\Suppliers_DAL.cs" />
+    <Compile Include="DAL\Workers.cs" />
+    <Compile Include="Hospital_Management_SystemDataSet.cs">
+      <DependentUpon>Hospital_Management_SystemDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Hospital_Management_SystemDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Hospital_Management_SystemDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Pharmaceutical Management\AddDrugs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Pharmaceutical Management\AddDrugs.Designer.cs">
+      <DependentUpon>AddDrugs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Pharmaceutical Management\frmCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Pharmaceutical Management\frmCategory.Designer.cs">
+      <DependentUpon>frmCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Pharmaceutical Management\frmDealers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Pharmaceutical Management\frmDealers.Designer.cs">
+      <DependentUpon>frmDealers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Pharmaceutical Management\frmPurchasesAndSales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Pharmaceutical Management\frmPurchasesAndSales.Designer.cs">
+      <DependentUpon>frmPurchasesAndSales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Pharmaceutical Management\frmTransactions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Pharmaceutical Management\frmTransactions.Designer.cs">
+      <DependentUpon>frmTransactions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Pharmaceutical Management\frmWorker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Pharmaceutical Management\frmWorker.Designer.cs">
+      <DependentUpon>frmWorker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Pharmaceutical Management\Inventory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Pharmaceutical Management\Inventory.Designer.cs">
+      <DependentUpon>Inventory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Welcome screen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Welcome screen.Designer.cs">
+      <DependentUpon>Welcome screen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Screens\Pharmaceutical Management\AddDrugs.resx">
+      <DependentUpon>AddDrugs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Pharmaceutical Management\frmCategory.resx">
+      <DependentUpon>frmCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Pharmaceutical Management\frmDealers.resx">
+      <DependentUpon>frmDealers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Pharmaceutical Management\frmPurchasesAndSales.resx">
+      <DependentUpon>frmPurchasesAndSales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Pharmaceutical Management\frmTransactions.resx">
+      <DependentUpon>frmTransactions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Pharmaceutical Management\frmWorker.resx">
+      <DependentUpon>frmWorker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Pharmaceutical Management\Inventory.resx">
+      <DependentUpon>Inventory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Welcome screen.resx">
+      <DependentUpon>Welcome screen.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Hospital_Management_SystemDataSet.xsc">
+      <DependentUpon>Hospital_Management_SystemDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Hospital_Management_SystemDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Hospital_Management_SystemDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Hospital_Management_SystemDataSet.xss">
+      <DependentUpon>Hospital_Management_SystemDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Screens\Hospital Resources\" />
+    <Folder Include="Screens\Patients Management\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\215904-200.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Hospital Management System.accdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="WIA">
+      <Guid>{94A0E92D-43C0-494E-AC29-FD45948A5221}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
